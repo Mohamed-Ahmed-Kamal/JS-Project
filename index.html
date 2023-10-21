@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>JS Project</title>
+  </head>
+  <body>
+    <!-- start creat box ------------------------------------------------ -->
+    <div class="creat-box">
+      <form action="">
+        <h1 class="head-1">creat box</h1>
+        <input
+          type="number"
+          name="elements"
+          class="input"
+          placeholder="Number Of Elements"
+        />
+        <input
+          type="text"
+          name="texts"
+          class="input"
+          placeholder="Elements Text"
+        />
+        <select name="type" class="input">
+          <option value="Div">Div</option>
+          <option value="Section">Section</option>
+        </select>
+        <input type="submit" name="create" value="Create" />
+        <div class="results"></div>
+      </form>
+    </div>
+    <hr />
+    <!-- Start Clock -------------------------------------------------- -->
+    <h1 class="head-1">Clock</h1>
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+    <hr />
+    <!-- start drams ------------------------------------------------------- -->
+    <h1 class="head-1">Click to play</h1>
+    <div class="keys">
+      <div class="key" data-key="65">
+        <kbd>A</kbd>
+        <span class="sound">Clap</span>
+      </div>
+
+      <div class="key" data-key="83">
+        <kbd>S</kbd>
+        <span class="sound">Shot</span>
+      </div>
+
+      <div class="key" data-key="68">
+        <kbd>D</kbd>
+        <span class="sound">Phonk</span>
+      </div>
+
+      <div class="key" data-key="70">
+        <kbd>F</kbd>
+        <span class="sound">Snare</span>
+      </div>
+
+      <div class="key" data-key="71">
+        <kbd>G</kbd>
+        <span class="sound">Hit</span>
+      </div>
+
+      <div class="key" data-key="72">
+        <kbd>H</kbd>
+        <span class="sound">Ride</span>
+      </div>
+
+      <div class="key" data-key="74">
+        <kbd>J</kbd>
+        <span class="sound">Tom</span>
+      </div>
+
+      <div class="key" data-key="75">
+        <kbd>K</kbd>
+        <span class="sound">Drum</span>
+      </div>
+
+      <div class="key" data-key="76">
+        <kbd>L</kbd>
+        <span class="sound">Bell</span>
+      </div>
+    </div>
+
+    <audio data-key="65" src="sounds/909-clap-wet.wav"></audio>
+    <audio data-key="83" src="sounds/closed-hat-bright-shot.wav"></audio>
+    <audio data-key="68" src="sounds/perc-hit-tom.wav"></audio>
+    <audio data-key="70" src="sounds/lo-fi-808-snare.wav"></audio>
+    <audio data-key="71" src="sounds/perc-hit-object-shot.wav"></audio>
+    <audio data-key="72" src="sounds/perc-hit-ride.wav"></audio>
+    <audio data-key="74" src="sounds/perc-hit-tom.wav"></audio>
+    <audio data-key="75" src="sounds/tambourine-drum-coldest.wav"></audio>
+    <audio data-key="76" src="sounds/triangle-bell_150bpm_C_major.wav"></audio>
+    <hr />
+    <!--start update css variables ----------------------------  -->
+<div class="css-variables">
+    <h1>Update CSS variables With <span class="h1">JS</span></h1>
+    <div class="controls">
+      <label for="spacing">Spacing</label>
+      <input
+        type="range"
+        name="spacing"
+        min="10"
+        max="200"
+        value="10"
+        data-sizing="px"
+      />
+
+      <label for="blur">Blur</label>
+      <input
+        type="range"
+        name="blur"
+        min="0"
+        max="25"
+        value="10"
+        data-sizing="px"
+      />
+
+      <label for="base">Base color</label>
+      <input type="color" name="base" value="#ffc600" />
+    </div>
+    <img src="images/kasper poma.jpg" alt="" />
+</div>
+    <script src="main.js"></script>
+  </body>
+</html>
