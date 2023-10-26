@@ -60,3 +60,17 @@ function update() {
 }
 inputs.forEach((input) => input.addEventListener("change", update));
 inputs.forEach((input) => input.addEventListener("mousemove", update));
+//  start flex box- -----------------------------------------------------
+
+let panel = document.querySelectorAll(".panel");
+function opentoggle() {
+  this.classList.toggle("open");
+}
+function openactive(e) {
+  console.log(e.propertyName);
+  if (e.propertyName.includes("flex")) {
+    this.classList.toggle("openActive");
+  }
+}
+panel.forEach((panel) => panel.addEventListener("click", opentoggle));
+panel.forEach((panel) => panel.addEventListener("transitionend", openactive));
