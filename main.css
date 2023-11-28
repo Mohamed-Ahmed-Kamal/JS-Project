@@ -205,7 +205,7 @@ body {
   background-image: url(images/images.jpg);
 }
 .panel3 {
-  background-image: url(images/images\\(1\).jpg);
+  background-image: url(images/images\ \(1\).jpg);
 }
 .panel4 {
   background-image: url(images/paysage-nature-fond-ecran_882954-925.avif);
