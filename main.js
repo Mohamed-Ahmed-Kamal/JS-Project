@@ -74,3 +74,41 @@ function openactive(e) {
 }
 panel.forEach((panel) => panel.addEventListener("click", opentoggle));
 panel.forEach((panel) => panel.addEventListener("transitionend", openactive));
+
+// <!-- Start Know the population of each American state ----------------- -->
+
+let endpoint =
+  "https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json";
+let cities = [];
+fetch(endpoint)
+  .then((blob) => blob.json())
+  .then((data) => cities.push(...data));
+
+function findthematch(wordToMatch, cities) {
+  return cities.filter((place) => {
+    const regex = new RegExp(wordToMatch, "gi");
+    return place.city.match(regex) || place.state.match(regex);
+  });
+}
+
+function desplayMatches() {
+  const matchArray = findthematch(this.value, cities);
+  let inf = matchArray.map((place) => {
+    return `
+    
+    <li>
+    <span class="name">${place.city},${place.state}</span>
+    <span class="population">${place.population}</span>
+    </li>
+    `;
+  });
+  if (searchInput.value == "") {
+    suggestions.innerHTML = "";
+  } else {
+    suggestions.innerHTML = inf;
+  }
+}
+
+let searchInput = document.querySelector(".statePup .search-form .search");
+let suggestions = document.querySelector(".statePup .search-form .suggestions");
+searchInput.addEventListener("keyup", desplayMatches);
